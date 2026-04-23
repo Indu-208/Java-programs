@@ -1,13 +1,16 @@
-import java.util.*;
+import java.util.HashSet;
 
-class HashSetEx {
+public class HashSetEx {
     public static void main(String[] args) {
-        HashSet<Integer> set = new HashSet<>();
-
-        set.add(10);
-        set.add(20);
-        set.add(10); 
-
-        System.out.println(set);
+	HashSet<String> set = new HashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Mango");
+        set.add("Apple"); 
+        System.out.println("HashSet elements: " + set);
+        System.out.println("Contains Mango? " + set.contains("Mango"));
+        set.remove("Banana");
+        System.out.println("After removing Banana: " + set);
+        System.out.println("Size: " + set.size());
     }
 }
