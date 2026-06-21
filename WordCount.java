@@ -1,16 +1,16 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class WordCount {
     public static void main(String[] args) {
-        String str = "java python java c java c++";
-        String words[] = str.split(" ");
+        Scanner sc = new Scanner(System.in);
 
-        HashMap<String, Integer> map = new HashMap<>();
+        System.out.print("Enter a sentence: ");
+        String text = sc.nextLine();
 
-        for(String word : words) {
-            map.put(word, map.getOrDefault(word, 0) + 1);
-        }
+        String[] words = text.trim().split("\\s+");
 
-        System.out.println(map);
+        System.out.println("Word Count: " + words.length);
+
+        sc.close();
     }
 }
